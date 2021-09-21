@@ -12,8 +12,11 @@ public class Post {
     private String postType;
     private GeoInfo geo;
     private int signedId;
+    private boolean canPin;
+    private boolean canDelete;
+    private boolean canEdit;
     private int isPinned;
-    private int markedAsAds;
+    private boolean markedAsAds;
     private boolean isFavorite;
 
     public int getId() {
@@ -104,6 +107,30 @@ public class Post {
         this.signedId = signedId;
     }
 
+    public boolean isCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+    public boolean isCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(boolean canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public boolean isCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(boolean canEdit) {
+        this.canEdit = canEdit;
+    }
+
     public int getIsPinned() {
         return isPinned;
     }
@@ -112,11 +139,11 @@ public class Post {
         this.isPinned = isPinned;
     }
 
-    public int getMarkedAsAds() {
+    public boolean isMarkedAsAds() {
         return markedAsAds;
     }
 
-    public void setMarkedAsAds(int markedAsAds) {
+    public void setMarkedAsAds(boolean markedAsAds) {
         this.markedAsAds = markedAsAds;
     }
 
